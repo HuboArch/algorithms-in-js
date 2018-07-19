@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "data-structure and algorithms in javascript",
   "scripts": {
-    "cm": "git-cz"
+    "cm": "git-cz",
+		"lint": "eslint ./src/*"
   },
   "main": "index.js",
   "repository": "git@primary:agribeau/algorithms-in-js.git",
