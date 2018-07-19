@@ -1,23 +1,23 @@
 {
-  "name": "algorithms-in-js",
-  "version": "1.0.0",
-  "description": "data-structure and algorithms in javascript",
-  "scripts": {
-    "cm": "git-cz",
-		"lint": "eslint ./src/*"
-  },
-  "main": "index.js",
-  "repository": "git@primary:agribeau/algorithms-in-js.git",
-  "author": "dean",
-  "license": "MIT",
-  "devDependencies": {
-    "commitizen": "^2.10.1",
-    "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^5.1.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "algorithms-in-js",
+    "version": "1.0.0",
+    "description": "data-structure and algorithms in javascript",
+    "scripts": {
+        "cm": "git-cz",
+        "lint": "eslint ./src/*"
+    },
+    "main": "index.js",
+    "repository": "git@primary:agribeau/algorithms-in-js.git",
+    "author": "dean",
+    "license": "MIT",
+    "devDependencies": {
+        "commitizen": "^2.10.1",
+        "cz-conventional-changelog": "^2.1.0",
+        "eslint": "^5.1.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
-  }
 }
