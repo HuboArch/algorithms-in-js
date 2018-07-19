@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "data-structure and algorithms in javascript",
   "scripts": {
-    "cmt": "git-cz"
+    "cm": "git-cz"
   },
   "main": "index.js",
   "repository": "git@primary:agribeau/algorithms-in-js.git",
