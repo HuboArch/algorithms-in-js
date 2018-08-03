@@ -66,10 +66,29 @@ export default class SinglyLinkedList {
     insertHead(value) {
         let tmpCell = this.head.next;
 
-        let newNode = new SinglyLinkedListNode(value);
+        const newNode = new SinglyLinkedListNode(value);
 
         this.head.next = newNode;
         newNode.next   = tmpCell;
+
+        return this;
+    }
+
+    /**
+     * 在链表尾部插入结点元素
+     *
+     * @param {*} value
+     * @returns {SinglyLinkedList}
+     */
+    insertTail(value) {
+        let pNode = this.head.next;
+
+        // 获取尾部结点
+        while (pNode !== null) {
+            pNode = pNode.next;
+        }
+
+        pNode.next = new SinglyLinkedListNode(value);
 
         return this;
     }
