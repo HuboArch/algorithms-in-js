@@ -20,4 +20,13 @@ export default class SinglyLinkedList {
         }
         this.head.next = null;
     }
+
+    /**
+     * 销毁链表
+     */
+    destroyList() {
+        this.clearList();
+
+        this.head = null;
+    }
 }
