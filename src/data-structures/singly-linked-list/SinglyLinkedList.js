@@ -92,4 +92,30 @@ export default class SinglyLinkedList {
 
         return this;
     }
+
+    /**
+     * 任意索引位置后面插入结点元素
+     *
+     * @param {number} index [0, length-1]
+     * @param {*} value
+     * @returns {boolean}
+     */
+    insertNode(index, value) {
+        if (index < 0 || index >= this.getLength()) {
+            return false;
+        }
+
+        let p = this.head;
+
+        for (let j = 0; j <= index; j++) {
+            p = p.next;
+        }
+
+        let newNode  = new SinglyLinkedListNode(value);
+        newNode.next = p.next;
+
+        p.next = newNode;
+
+        return true;
+    }
 }
