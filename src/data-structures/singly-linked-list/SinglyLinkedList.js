@@ -38,4 +38,21 @@ export default class SinglyLinkedList {
     isEmpty() {
         return this.head.next === null;
     }
+
+    /**
+     * 获取链表的长度
+     *
+     * @returns {number}
+     */
+    getLength() {
+        let pNode  = this.head.next,
+            length = 0;
+
+        while (pNode !== null) {
+            length++;
+
+            pNode = pNode.next;
+        }
+        return length;
+    }
 }
