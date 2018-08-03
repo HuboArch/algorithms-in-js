@@ -1,5 +1,4 @@
-import Node                 from "SinglyLinkedListNode";
-import SinglyLinkedListNode from "./SinglyLinkedListNode";
+import Node from "SinglyLinkedListNode";
 
 export default class SinglyLinkedList {
     constructor() {
@@ -66,7 +65,7 @@ export default class SinglyLinkedList {
     insertHead(value) {
         let tmpCell = this.head.next;
 
-        const newNode = new SinglyLinkedListNode(value);
+        const newNode = new Node(value);
 
         this.head.next = newNode;
         newNode.next = tmpCell;
@@ -88,7 +87,7 @@ export default class SinglyLinkedList {
             p = p.next;
         }
 
-        p.next = new SinglyLinkedListNode(value);
+        p.next = new Node(value);
 
         return this;
     }
@@ -111,7 +110,7 @@ export default class SinglyLinkedList {
             p = p.next;
         }
 
-        let newNode = new SinglyLinkedListNode(value);
+        let newNode = new Node(value);
         newNode.next = p.next;
 
         p.next = newNode;
