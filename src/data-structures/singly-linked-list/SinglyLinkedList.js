@@ -11,13 +11,13 @@ export default class SinglyLinkedList {
      * 清空链表
      */
     clearList() {
-        let pNode   = this.head.next,
-            tmpCell = null;
+        let p = this.head.next;
+        let tmpCell = null;
 
-        while (pNode !== null) {
-            tmpCell = pNode.next;
-            pNode   = null;
-            pNode   = tmpCell;
+        while (p !== null) {
+            tmpCell = p.next;
+            p = null;
+            p = tmpCell;
         }
         this.head.next = null;
     }
@@ -46,13 +46,13 @@ export default class SinglyLinkedList {
      * @returns {number}
      */
     getLength() {
-        let pNode  = this.head.next,
+        let p = this.head.next,
             length = 0;
 
-        while (pNode !== null) {
+        while (p !== null) {
             length++;
 
-            pNode = pNode.next;
+            p = p.next;
         }
         return length;
     }
@@ -69,7 +69,7 @@ export default class SinglyLinkedList {
         const newNode = new SinglyLinkedListNode(value);
 
         this.head.next = newNode;
-        newNode.next   = tmpCell;
+        newNode.next = tmpCell;
 
         return this;
     }
@@ -81,14 +81,14 @@ export default class SinglyLinkedList {
      * @returns {SinglyLinkedList}
      */
     insertTail(value) {
-        let pNode = this.head.next;
+        let p = this.head.next;
 
         // 获取尾部结点
-        while (pNode !== null) {
-            pNode = pNode.next;
+        while (p !== null) {
+            p = p.next;
         }
 
-        pNode.next = new SinglyLinkedListNode(value);
+        p.next = new SinglyLinkedListNode(value);
 
         return this;
     }
@@ -111,7 +111,7 @@ export default class SinglyLinkedList {
             p = p.next;
         }
 
-        let newNode  = new SinglyLinkedListNode(value);
+        let newNode = new SinglyLinkedListNode(value);
         newNode.next = p.next;
 
         p.next = newNode;
