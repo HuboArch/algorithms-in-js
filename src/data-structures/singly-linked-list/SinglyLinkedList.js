@@ -29,4 +29,13 @@ export default class SinglyLinkedList {
 
         this.head = null;
     }
+
+    /**
+     * 判断链表是否为空
+     *
+     * @returns {boolean}
+     */
+    isEmpty() {
+        return this.head.next === null;
+    }
 }
