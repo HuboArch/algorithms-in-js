@@ -1,4 +1,5 @@
-import Node from "SinglyLinkedListNode";
+import Node                 from "SinglyLinkedListNode";
+import SinglyLinkedListNode from "./SinglyLinkedListNode";
 
 export default class SinglyLinkedList {
     constructor() {
@@ -54,5 +55,22 @@ export default class SinglyLinkedList {
             pNode = pNode.next;
         }
         return length;
+    }
+
+    /**
+     * 在链表首部插入结点元素
+     *
+     * @param {*} value
+     * @returns {SinglyLinkedList}
+     */
+    insertHead(value) {
+        let tmpCell = this.head.next;
+
+        let newNode = new SinglyLinkedListNode(value);
+
+        this.head.next = newNode;
+        newNode.next   = tmpCell;
+
+        return this;
     }
 }
