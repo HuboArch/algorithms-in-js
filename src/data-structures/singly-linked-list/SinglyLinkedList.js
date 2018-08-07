@@ -117,4 +117,33 @@ export default class SinglyLinkedList {
 
         return true;
     }
+
+    /**
+     * 删除指定索引位置的结点
+     *
+     * @param index
+     * @returns {number} 失败返回 -1
+     */
+    deleteNode(index) {
+        const length = this.getLength();
+
+        if (index < 0 || index > length - 1) {
+            return -1;
+        }
+
+        // 获取被删除结点的前一个结点
+        let prevNode = this.head;
+
+        for (let j = 0; j < index; j++) {
+            prevNode = prevNode.next;
+        }
+
+        let curNode = prevNode.next;
+        let deletedData = curNode.data;
+
+        prevNode.next = curNode.next;
+        curNode = null;
+
+        return deletedData;
+    }
 }
