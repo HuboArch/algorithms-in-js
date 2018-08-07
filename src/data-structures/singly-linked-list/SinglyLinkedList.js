@@ -2,7 +2,7 @@ import Node from "SinglyLinkedListNode";
 
 export default class SinglyLinkedList {
     constructor() {
-        // 带有头结点的链表
+        // 带有虚拟结点(dummy node)的链表
         this.head = new Node();
     }
 
@@ -110,7 +110,7 @@ export default class SinglyLinkedList {
             p = p.next;
         }
 
-        let newNode = new Node(value);
+        const newNode = new Node(value);
         newNode.next = p.next;
 
         p.next = newNode;
