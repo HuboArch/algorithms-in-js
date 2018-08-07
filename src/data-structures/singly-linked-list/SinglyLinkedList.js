@@ -186,4 +186,29 @@ export default class SinglyLinkedList {
 
         return -1;
     }
+
+    /**
+     * 获取指定结点的前驱
+     *
+     * @param {*} value
+     * @returns {Object}
+     */
+    prevNode(value) {
+        let p = this.head.next;
+
+        // 单链表的首结点没有前驱
+        if (p.data === value) {
+            return null;
+        }
+
+        while (p.next) {
+            if (p.next.data === value) {
+                return p;
+            }
+
+            p = p.next;
+        }
+
+        return null;
+    }
 }
