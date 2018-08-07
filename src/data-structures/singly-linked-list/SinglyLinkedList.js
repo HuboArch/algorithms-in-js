@@ -146,4 +146,25 @@ export default class SinglyLinkedList {
 
         return deletedData;
     }
+
+    /**
+     * 获取指定索引位置结点的数据域值
+     *
+     * @param index
+     * @returns {number} 失败返回 -1
+     */
+    getNode(index) {
+        const length = this.getLength();
+
+        if (index < 0 || index > length - 1) {
+            return -1;
+        }
+
+        let p = this.head;
+        for (let j = 0; j <= index; j++) {
+            p = p.next;
+        }
+
+        return p.data;
+    }
 }
