@@ -167,4 +167,23 @@ export default class SinglyLinkedList {
 
         return p.data;
     }
+
+    /**
+     * 获取指定结点的位置索引
+     *
+     * @param value
+     * @returns {number} [0, length - 1]
+     */
+    locateNode(value) {
+        let p = this.head.next;
+
+        for (let i = 0; p; i++) {
+            if (p.data === value) {
+                return i;
+            }
+            p = p.next;
+        }
+
+        return -1;
+    }
 }
