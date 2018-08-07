@@ -148,24 +148,24 @@ export default class SinglyLinkedList {
     }
 
     /**
-     * 获取指定索引位置结点的数据域值
+     * 获取指定索引位置的结点
      *
-     * @param index
-     * @returns {number} 失败返回 -1
+     * @param index [0, length - 1]
+     * @returns {Object}
      */
     getNode(index) {
         const length = this.getLength();
 
         if (index < 0 || index > length - 1) {
-            return -1;
+            return null;
         }
 
-        let p = this.head;
-        for (let j = 0; j <= index; j++) {
+        let p = this.head.next;
+        for (let j = 0; j < index; j++) {
             p = p.next;
         }
 
-        return p.data;
+        return p;
     }
 
     /**
