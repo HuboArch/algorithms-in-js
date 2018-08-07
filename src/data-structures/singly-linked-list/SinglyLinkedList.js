@@ -211,4 +211,24 @@ export default class SinglyLinkedList {
 
         return null;
     }
+
+    /**
+     * 获取指定结点的后继
+     *
+     * @param value
+     * @returns {Object}
+     */
+    nextNode(value) {
+        let p = this.head.next;
+
+        while (p) {
+            if (p.data === value) {
+                return p.next;
+            }
+
+            p = p.next;
+        }
+
+        return null;
+    }
 }
