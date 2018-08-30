@@ -22,4 +22,13 @@ export default class SinglyLinkedList {
     getSize() {
         return this.size;
     }
+
+    /**
+     * 判断链表是否为空
+     *
+     * @returns {boolean}
+     */
+    isEmpty() {
+        return this.size === 0;
+    }
 }
