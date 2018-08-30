@@ -49,9 +49,6 @@ export default class SinglyLinkedList {
 
         let tmpCell = prev.next;
         prev.next = new Node(elem, tmpCell);
-        if (tmpCell !== null) {
-            tmpCell.next = null; // prevent loitering object
-        }
 
         this.size++;
     }
