@@ -165,4 +165,17 @@ export default class SinglyLinkedList {
 
         return false;
     }
+
+    toString() {
+        let nodes = [];
+        let cur = this.dummyHead.next;
+
+        while (cur !== null) {
+            nodes.push(cur.elem);
+
+            cur = cur.next;
+        }
+
+        return nodes.map(node => node.toString()).toString();
+    }
 }
