@@ -110,5 +110,40 @@ export default class SinglyLinkedList {
         this.remove(this.size - 1);
     }
 
+    /**
+     * 获取指定索引位置的结点元素
+     *
+     * @param idx
+     * @returns {*}
+     */
+    get(idx) {
+        if (idx < 0 || idx >= this.size) {
+            throw new Error("Get failed. Illegal argument idx.");
+        }
 
+        cur = this.dummyHead.next;
+        for (let i = 0; i < idx; i++) {
+            cur = cur.next;
+        }
+
+        return cur.elem;
+    }
+
+    /**
+     * 获取链表首结点的元素
+     *
+     * @returns {*}
+     */
+    getFirst() {
+        return this.get(0);
+    }
+
+    /**
+     * 获取链表尾结点的元素
+     *
+     * @returns {*}
+     */
+    getLast() {
+        return this.get(this.size - 1);
+    }
 }
