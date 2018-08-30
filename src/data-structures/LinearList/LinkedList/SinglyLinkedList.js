@@ -14,5 +14,12 @@ export default class SinglyLinkedList {
         this.compare = new Comparator(comparatorFunc);
     }
 
-
+    /**
+     * 获取链表的大小
+     *
+     * @returns {number}
+     */
+    getSize() {
+        return this.size;
+    }
 }
