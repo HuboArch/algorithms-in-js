@@ -146,4 +146,23 @@ export default class SinglyLinkedList {
     getLast() {
         return this.get(this.size - 1);
     }
+
+    /**
+     * 判断链表中是否含有特定的元素
+     *
+     * @param elem {*}
+     * @returns {boolean}
+     */
+    contains(elem) {
+        cur = this.dummyHead.next;
+        while (cur !== null) {
+            if (this.compare.equal(cur.elem, elem)) {
+                return true;
+            }
+
+            cur = cur.next;
+        }
+
+        return false;
+    }
 }
