@@ -74,5 +74,44 @@ export default class SinglyLinkedList {
         this.add(this.size, elem);
     }
 
+    /**
+     * 删除指定索引位置的结点
+     *
+     * @param idx {number}
+     * @returns {null|*}
+     */
+    remove(idx) {
+        if (idx < 0 || idx >= this.size) {
+            throw new Error("Remove failed. Illegal argument idx.");
+        }
+
+        prev = this.dummyHead;
+        for (let i = 0; i < idx; i++) {
+            prev = prev.next;
+        }
+
+        let tmpCell = prev.next;
+        prev.next = tmpCell.next;
+        tmpCell.next = null; // prevent loitering object
+
+        this.size--;
+
+        return tmpCell.elem;
+    }
+
+    /**
+     * 删除链表的首结点
+     */
+    removeFirst() {
+        this.remove(0);
+    }
+
+    /**
+     * 删除链表的尾结点
+     */
+    removeLast() {
+        this.remove(this.size - 1);
+    }
+
 
 }
