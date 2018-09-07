@@ -4,7 +4,8 @@
     "description": "data-structure and algorithms in javascript",
     "scripts": {
         "cm": "git-cz",
-        "lint": "eslint ./src/*"
+        "lint": "eslint ./src/*",
+        "test": "jest"
     },
     "main": "index.js",
     "repository": "git@primary:agribeau/algorithms-in-js.git",
