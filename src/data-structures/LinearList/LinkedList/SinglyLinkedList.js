@@ -1,5 +1,5 @@
-import Node       from "SinglyLinkedListNode";
-import Comparator from "../../../utils/Comparator";
+import Node       from "./SinglyLinkedListNode";
+import Comparator from "../../../utils/Comparator/Comparator";
 
 export default class SinglyLinkedList {
 
