@@ -154,7 +154,7 @@ export default class SinglyLinkedList {
      * @returns {boolean}
      */
     contains(elem) {
-        cur = this.dummyHead.next;
+        let cur = this.dummyHead.next;
         while (cur !== null) {
             if (this.compare.equal(cur.elem, elem)) {
                 return true;
