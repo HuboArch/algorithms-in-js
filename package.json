@@ -11,9 +11,15 @@
     "author": "dean",
     "license": "MIT",
     "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-jest": "^23.4.2",
         "commitizen": "^2.10.1",
         "cz-conventional-changelog": "^2.1.0",
-        "eslint": "^5.1.0"
+        "eslint": "^5.1.0",
+        "jest": "^23.5.0",
+        "regenerator-runtime": "^0.12.1"
     },
     "config": {
         "commitizen": {
