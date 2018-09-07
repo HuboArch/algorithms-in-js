@@ -4,7 +4,7 @@ import Comparator from "../../../utils/Comparator";
 export default class SinglyLinkedList {
 
     /**
-     * @param [comparatorFunc] {Function}
+     * @param {Function} [comparatorFunc]
      */
     constructor(comparatorFunc) {
         this.dummyHead = new Node();
@@ -34,7 +34,7 @@ export default class SinglyLinkedList {
     /**
      * 在指定的索引位置添加元素
      *
-     * @param idx {number}
+     * @param {number} idx
      * @param elem {*}
      */
     add(idx, elem) {
@@ -56,7 +56,7 @@ export default class SinglyLinkedList {
     /**
      * 在链表首部添加元素
      *
-     * @param elem {*}
+     * @param {*} elem
      */
     addFirst(elem) {
         this.add(0, elem);
@@ -65,7 +65,7 @@ export default class SinglyLinkedList {
     /**
      * 在链表尾部添加元素
      *
-     * @param elem {*}
+     * @param {*} elem
      */
     addLast(elem) {
         this.add(this.size, elem);
@@ -74,7 +74,7 @@ export default class SinglyLinkedList {
     /**
      * 删除指定索引位置的结点
      *
-     * @param idx {number}
+     * @param {number} idx
      * @returns {null|*}
      */
     remove(idx) {
@@ -113,7 +113,7 @@ export default class SinglyLinkedList {
     /**
      * 获取指定索引位置的结点元素
      *
-     * @param idx
+     * @param {number} idx
      * @returns {*}
      */
     get(idx) {
@@ -150,7 +150,7 @@ export default class SinglyLinkedList {
     /**
      * 判断链表中是否含有特定的元素
      *
-     * @param elem {*}
+     * @param {*} elem
      * @returns {boolean}
      */
     contains(elem) {

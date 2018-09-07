@@ -1,15 +1,15 @@
 export default class Comparator {
 
     /**
-     * @param compareFunc {function(a: *, b: *)}
+     * @param  {function(a: *, b: *)} compareFunc
      */
     constructor(compareFunc) {
         this.compare = compareFunc || Comparator.defaultCompareFunc;
     }
 
     /**
-     * @param a {(string|number)}
-     * @param b {(string|number)}
+     * @param {(string|number)} a
+     * @param {(string|number)} b
      * @returns {number}
      */
     static defaultCompareFunc(a, b) {
