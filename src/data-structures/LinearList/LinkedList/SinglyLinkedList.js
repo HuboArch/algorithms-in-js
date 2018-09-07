@@ -42,7 +42,7 @@ export default class SinglyLinkedList {
             throw new Error("Add failed. Illegal argument idx.");
         }
 
-        prev = this.dummyHead;
+        let prev = this.dummyHead;
         for (let i = 0; i < idx; i++) {
             prev = prev.next;
         }
