@@ -57,3 +57,5 @@ class LinkedList {
         return nodes.map(node => node.toString()).toString();
     }
 }
+
+export default LinkedList;
