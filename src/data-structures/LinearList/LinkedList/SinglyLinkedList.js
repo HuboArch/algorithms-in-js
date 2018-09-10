@@ -171,7 +171,7 @@ export default class SinglyLinkedList {
         let cur = this.dummyHead.next;
 
         while (cur !== null) {
-            nodes.push(cur.elem);
+            nodes.push(cur);
 
             cur = cur.next;
         }
